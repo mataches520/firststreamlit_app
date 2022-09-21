@@ -24,8 +24,10 @@ streamlit.dataframe(fruit_to_show)
 
 streamlit.header("Fruityvice Fruit Advice!")
 #new section to display api response fruityvice
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/kiwi")
-streamlit.text(fruityvice_response.json()) # write the date to the screen
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('The user entered ', fruit_choice)
+#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/kiwi")
+#streamlit.text(fruityvice_response.json()) # write the date to the screen
 
 # normalize json
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
