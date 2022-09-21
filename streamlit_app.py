@@ -30,6 +30,6 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_cho
 #streamlit.text(fruityvice_response.json()) # write the date to the screen
 
 # normalize json
-#fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
-#streamlit.dataframe(fruityvice_normalized)
+streamlit.dataframe(fruityvice_normalized)
