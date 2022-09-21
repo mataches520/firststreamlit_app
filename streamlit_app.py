@@ -24,7 +24,7 @@ streamlit.dataframe(fruit_to_show)
 
 streamlit.header("Fruityvice Fruit Advice!")
 #new section to display api response fruityvice
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon"+"kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/kiwi")
 streamlit.text(fruityvice_response.json()) # write the date to the screen
 
 # normalize json
