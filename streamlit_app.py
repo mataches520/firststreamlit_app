@@ -25,8 +25,6 @@ fruit_to_show=my_fruit_list.loc[fruit_selected]
 streamlit.dataframe(fruit_to_show)
 
 ######################################################################
-
-
 streamlit.header("Fruityvice Fruit Advice!")
 ##new section to display api response fruityvice
 try:
@@ -46,8 +44,6 @@ except URLError as e:
 ##streamlit.text(fruityvice_response.json()) # write the date to the screen
 #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #streamlit.dataframe(fruityvice_normalized) 
-
-
 ############################################################################
 #stop here in order to avoid insert
 streamlit.stop()
