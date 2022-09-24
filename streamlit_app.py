@@ -53,7 +53,7 @@ except URLError as e:
 #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #streamlit.dataframe(fruityvice_normalized) 
 ############################################################################
-#stop here in order to avoid insert
+stop here in order to avoid insert
 streamlit.stop()
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
@@ -72,4 +72,4 @@ def insert_row_snowflake(new_fruit):
     return "Thanks for adding " + new_fruit
 
 #insert
-my_cur.execute("insert into fruit_load_list values ('from streamlit') ") 
+#my_cur.execute("insert into fruit_load_list values ('from streamlit') ") 
